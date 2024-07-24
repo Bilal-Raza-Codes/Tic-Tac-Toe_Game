@@ -34,6 +34,31 @@ header h1 {
   text-decoration: underline #D53500;
 }
 
+
+#musicBtn{
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  background-color: transparent;
+  border: none;
+  width: 3%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#musicBtn:hover{
+  background-color: #998475;
+  border-radius: 15%;
+}
+#musicBtn img{
+  position: absolute;
+  width: 93%;
+  height: 83%;
+}
+
+
+
 main {
   display: flex;
   position: relative;
@@ -112,13 +137,14 @@ footer {
 /* Media Queries */
 /* Responsive Layouts for Different Resolutions */
 /* Adjust styles for mobile devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
   header{
     height: 7.5vh;
   }
 
   header h1 {
     font-size: 5vh;
+    flex-wrap: wrap
   }
 
   .gameArea {

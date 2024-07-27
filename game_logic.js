@@ -8,11 +8,29 @@ cells.forEach(cell => {
 });
 
 // applying background music 
+let bkgrndMusicStatus = true;
+let bkgrndMusic;
  document.addEventListener("DOMContentLoaded", () => {
-   const bkgrndMusic = new Audio("/audios/background music.mp3");
+   bkgrndMusic = new Audio("/audios/background music.mp3");
    bkgrndMusic.loop = true;
    bkgrndMusic.play();
  });
+
+// working on button to control background music
+const bkgrndMusicBtn = document.querySelector("#musicBtn");
+const bkgrndMusiControl = () => {
+  if (bkgrndMusicStatus === true) {
+    bkgrndMusic.pause();  // use them when you want to use your resources less. 
+    // bkgrndMusic.muted = true;  // use this for better experiene. continue playing audio in background thus resources use more
+    bkgrndMusicStatus = false;
+  }
+  else{
+    bkgrndMusic.play();  // use them when you want to use your resources less. 
+    // bkgrndMusic.muted = false;  // use this for better experiene. continue playing audio in background thus resources use more
+    bkgrndMusicStatus = true;
+  }
+};
+bkgrndMusicBtn.addEventListener("click", bkgrndMusiControl);
 
 
 // Store the images in Image objects

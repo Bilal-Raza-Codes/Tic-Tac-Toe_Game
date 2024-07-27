@@ -18,15 +18,18 @@ let bkgrndMusic;
 
 // working on button to control background music
 const bkgrndMusicBtn = document.querySelector("#musicBtn");
+const bkgrndMusicIcon = document.querySelector("#bkgrndMusicIcon");
 const bkgrndMusiControl = () => {
   if (bkgrndMusicStatus === true) {
     bkgrndMusic.pause();  // use them when you want to use your resources less. 
     // bkgrndMusic.muted = true;  // use this for better experiene. continue playing audio in background thus resources use more
+    bkgrndMusicIcon.src = "Images/mute.png";
     bkgrndMusicStatus = false;
   }
   else{
     bkgrndMusic.play();  // use them when you want to use your resources less. 
     // bkgrndMusic.muted = false;  // use this for better experiene. continue playing audio in background thus resources use more
+    bkgrndMusicIcon.src = "Images/music on.png";
     bkgrndMusicStatus = true;
   }
 };

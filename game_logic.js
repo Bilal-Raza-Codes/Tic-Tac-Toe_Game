@@ -54,9 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const endGame = () => {
     gameActive = false; // Set the game state to inactive
     cells.forEach(cell => cell.removeEventListener("click", handleCellClick));
+   
     return;
   };
   
+  const gameDraw = ()=>{
+    if(Array.from(cells).every(cell => cell.getAttribute("data-filled") === "true")){
+      setTimeout(()=>{
+        alert("Game Draw!");
+      }, 50);
+    }
+    return;
+  }
   
   //------------------------------------------------------------------------Working on Images and Cell click functionality-----------------------------------------------------------------------------
   const cross = new Image();
@@ -87,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (gameWin(index)) {
       endGame();
+    } else if (gameDraw()) { // Check if the game is a draw
+      endGame(true); // Pass true to indicate a draw
     }
   };
   

@@ -103,6 +103,9 @@ main {
   box-sizing: border-box;
   margin: 1%;
 }
+.cellsAfterWin {
+  background-color: #f5e7ff !important;
+}
 #cell-1{
   border-radius: 1.5em 9% 9% 9%;
 }

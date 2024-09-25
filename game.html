@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic-Tac-Toe Game</title>
   <link rel="stylesheet" href="game_style.css"> <!--adding css file-->
 </head>
+
 <body>
   <!-- header  -->
   <header>
@@ -15,10 +17,17 @@
     </button>
   </header>
 
-  <!--  -->
-<!-- main  -->
+
+  <!-- Leader Board  -->
+  <div class="leaderboard">
+    <h2>Leader Board</h2>
+    <ol id="leaderboardList"></ol>
+  </div>
+
+
+  <!-- main  -->
   <main>
-    <div class="gameArea">  
+    <div class="gameArea">
       <div class="game-board">
         <button class="cells" id="cell-1" title="cell-1"></button>
         <button class="cells" id="cell-2" title="cell-2"></button>
@@ -37,7 +46,8 @@
   <footer>
     <button>hello</button>
   </footer>
- <!-- Adding JS file -->
+  <!-- Adding JS file -->
   <script src="game_logic.js"></script>
 </body>
+
 </html>
